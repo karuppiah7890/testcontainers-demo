@@ -324,3 +324,12 @@ CONTAINER ID        IMAGE                               COMMAND             CREA
 b544411e51c2        testcontainersofficial/ryuk:0.3.0   "/app"              4 seconds ago       Up 4 seconds
  0.0.0.0:32770->8080/tcp   testcontainers-ryuk-b9c8d628-cba2-4541-81a5-86e9dcdeecbd
 ```
+
+---
+
+I need to try the same with Postgres and maybe Oracle
+too
+
+https://www.testcontainers.org/modules/databases/postgres/
+
+`org.testcontainers:postgresql:1.14.3`
