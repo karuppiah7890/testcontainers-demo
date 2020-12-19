@@ -333,3 +333,23 @@ too
 https://www.testcontainers.org/modules/databases/postgres/
 
 `org.testcontainers:postgresql:1.14.3`
+
+---
+
+I'm going to be adding PostgreSQL Client library as a dependency. The
+PostgreSQL JDBC Driver - https://github.com/pgjdbc/pgjdbc
+
+https://search.maven.org/search?q=g:org.postgresql%20AND%20a:postgresql
+
+https://search.maven.org/artifact/org.postgresql/postgresql
+
+I'm getting the latest version. At the time of this writing it's `42.2.18` and
+there are variations too in it.
+
+Since I use gradle, I'm going to adding a dependency like this
+
+```groovy
+implementation 'org.postgresql:postgresql:42.2.18'
+```
+
+https://jdbc.postgresql.org/documentation/head/
