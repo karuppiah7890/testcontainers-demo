@@ -353,3 +353,17 @@ implementation 'org.postgresql:postgresql:42.2.18'
 ```
 
 https://jdbc.postgresql.org/documentation/head/
+
+https://jdbc.postgresql.org/documentation/head/intro.html
+
+https://jdbc.postgresql.org/documentation/head/setup.html
+
+https://jdbc.postgresql.org/documentation/head/use.html
+
+https://jdbc.postgresql.org/documentation/head/load.html
+
+https://jdbc.postgresql.org/documentation/head/connect.html
+
+https://jdbc.postgresql.org/documentation/head/query.html
+
+
