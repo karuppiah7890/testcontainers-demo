@@ -41,7 +41,7 @@ dependencies {
 
     testImplementation "org.testcontainers:testcontainers:$testcontainers_version"
     testImplementation "org.testcontainers:junit-jupiter:$testcontainers_version"
-
+    testImplementation "org.testcontainers:postgresql:$testcontainers_version"
 }
 
 application {
