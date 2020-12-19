@@ -9,7 +9,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Testcontainers
-class RedisBackedCacheIntTestStep0 {
+class RedisBackedCacheIntTestStep {
     @Container
     public GenericContainer redis = new GenericContainer("redis:5.0.3-alpine")
             .withExposedPorts(6379);
