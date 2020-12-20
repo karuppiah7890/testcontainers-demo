@@ -2,17 +2,10 @@ package testcontainers.demo;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Testcontainers
-class RedisBackedCacheIntTestStep {
-    @Container
-    public GenericContainer redis = new GenericContainer("redis:5.0.3-alpine")
-            .withExposedPorts(6379);
+class RedisBackedCacheIntTestStepTestSuite extends RedisContainerTestSuite {
     private RedisBackedCache underTest;
 
     @BeforeEach
