@@ -20,4 +20,8 @@ public class SharedRedisExtension implements Extension, BeforeAllCallback {
     Integer getPort() {
         return redisContainer.getPort();
     }
+
+    String getContainerID() {
+        return redisContainer.getContainerId();
+    }
 }
