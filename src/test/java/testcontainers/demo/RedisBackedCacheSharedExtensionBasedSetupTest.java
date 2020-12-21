@@ -34,12 +34,9 @@ public class RedisBackedCacheSharedExtensionBasedSetupTest {
 
     @Test
     void anotherTestForSimplePutAndGet() {
-        String retrieved = underTest.get("test");
-        assertNull(retrieved);
-
         underTest.put("test", "anotherExample");
 
-        retrieved = underTest.get("test");
+        String retrieved = underTest.get("test");
         assertEquals("anotherExample", retrieved);
     }
 }
