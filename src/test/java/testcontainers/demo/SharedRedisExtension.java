@@ -4,7 +4,7 @@ import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.Extension;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-public class RedisExtension implements Extension, BeforeAllCallback {
+public class SharedRedisExtension implements Extension, BeforeAllCallback {
     final RedisContainer redisContainer =
             new RedisContainer("redis:5.0.3-alpine");
 

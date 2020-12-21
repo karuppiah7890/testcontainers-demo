@@ -6,16 +6,16 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RedisBackedCacheExtensionBasedSetupOne {
+public class RedisBackedCacheSharedExtensionBasedSetupTest {
     private RedisBackedCache underTest;
 
     @RegisterExtension
-    static RedisExtension redisExtension = new RedisExtension();
+    static SharedRedisExtension sharedRedisExtension = new SharedRedisExtension();
 
     @BeforeEach
     public void setUp() {
-        String address = redisExtension.getHost();
-        Integer port = redisExtension.getPort();
+        String address = sharedRedisExtension.getHost();
+        Integer port = sharedRedisExtension.getPort();
 
         // Now we have an address and port for Redis, no matter where it is running
         underTest = new RedisBackedCache(address, port);
@@ -27,5 +27,13 @@ public class RedisBackedCacheExtensionBasedSetupOne {
 
         String retrieved = underTest.get("test");
         assertEquals("example", retrieved);
+    }
+
+    @Test
+    void anotherTestForSimplePutAndGet() {
+        underTest.put("test", "anotherExample");
+
+        String retrieved = underTest.get("test");
+        assertEquals("anotherExample", retrieved);
     }
 }
